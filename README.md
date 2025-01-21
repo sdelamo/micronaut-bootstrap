@@ -1,5 +1,9 @@
 # Micronaut Boostrap
- Open-Source [Micronaut](https://micronaut.io) Java library, with baseline 17, for [Bootstrap components](https://getbootstrap.com). This library is licensed under Apache 2.0 License. 
+Open-Source [Micronaut](https://micronaut.io) Java library, with baseline 17, for [Bootstrap components](https://getbootstrap.com). This library is licensed under Apache 2.0 License.
+
+## Installation
+
+The library is available in Maven Central. 
 
 ## License Management
 
