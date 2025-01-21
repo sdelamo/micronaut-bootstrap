@@ -34,16 +34,31 @@ public class PaginationFactory {
 
     /**
      *
+     * @param totalSize Total Size
+     * @param offset Offset
+     * @param pageSize Page Size
+     * @param pageUriBuilder Page URI Builder
+     * @return Bootstrap Pagination
+     */
+    public Pagination create(long totalSize, int offset, int pageSize, Function<Integer, UriBuilder> pageUriBuilder) {
+        return new Pagination(totalSize,
+                offset,
+                pageSize,
+                paginationConfiguration.getMaxNumberOfPages(),
+                pageUriBuilder);
+    }
+
+    /**
+     *
      * @param page Page
      * @param pageUriBuilder Page URI Builder
      * @return Bootstrap Pagination
      * @param <T> – The generic type
      */
     public <T> Pagination create(Page<T> page, Function<Integer, UriBuilder> pageUriBuilder) {
-        return new Pagination(page.getTotalSize(),
+        return create(page.getTotalSize(),
                 (int) page.getOffset(),
                 page.getSize(),
-                paginationConfiguration.getMaxNumberOfPages(),
                 pageUriBuilder);
     }
 }
