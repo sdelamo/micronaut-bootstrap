@@ -1,5 +1,5 @@
 plugins {
-    id("io.micronaut.library.maven-publish")
+    id("io.micronaut.library.published-micronaut-library")
 }
 dependencies {
     annotationProcessor(mn.micronaut.validation.processor)

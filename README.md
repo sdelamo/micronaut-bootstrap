@@ -27,4 +27,4 @@ The template applies the [Gradle Build Native Image Plugin](https://graalvm.gith
 
 - Bump up version. Ensure `projectVersion` does not contain `-SNAPSHOT`. 
 - Tag it. E.g. `v1.0.0`
-- `./gradlew publishToSonatype closeSonatypeStagingRepository --info`
+- `./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository --info`
