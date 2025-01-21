@@ -1,4 +1,4 @@
-rootProject.name = "MicronautLibrary"
+rootProject.name = "Micronaut Bootstrap"
 
 include("micronaut-bootstrap")
 include("code-coverage-report")
