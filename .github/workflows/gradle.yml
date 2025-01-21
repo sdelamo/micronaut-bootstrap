@@ -1,9 +1,9 @@
 name: Java CI with Gradle
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "[1-9]+.[0-9]+.x" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "[1-9]+.[0-9]+.x" ]
 jobs:
   build:
     runs-on: ubuntu-latest
