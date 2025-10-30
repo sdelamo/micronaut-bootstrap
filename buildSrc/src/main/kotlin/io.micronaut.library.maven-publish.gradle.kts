@@ -1,7 +1,7 @@
 plugins {
     id("io.micronaut.java-base")
     `maven-publish` // https://docs.gradle.org/current/userguide/publishing_maven.html
-    signing // https://docs.gradle.org/current/userguide/signing_plugin.html
+    //signing // https://docs.gradle.org/current/userguide/signing_plugin.html
 }
 
 publishing {
@@ -14,6 +14,9 @@ publishing {
     publications {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
+            artifactId = project.name
+            group = project.findProperty("mavenGroup") as String
+            version = project.findProperty("projectVersion") as String
             pom {
                 inceptionYear.set(project.findProperty("inceptionYear") as String)
                 name.set(project.findProperty("projectName") as String)
@@ -39,10 +42,5 @@ publishing {
                 }
             }
         }
-    }
-}
-if (!version.toString().endsWith("SNAPSHOT")) {
-    signing {
-        sign(publishing.publications["mavenJava"])
     }
 }

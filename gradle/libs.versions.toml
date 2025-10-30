@@ -5,8 +5,10 @@ micronaut="4.10.1"
 spotless = "7.0.2"
 graalvm-native-buildtools = "0.11.2"
 micronaut-gradle-plugin = "4.6.1" # https://plugins.gradle.org/plugin/io.micronaut.application
+jreleaser = "1.20.0" # https://plugins.gradle.org/plugin/org.jreleaser
 
 [libraries]
 spotless = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
 graalvm-native-buildtools = { module = "org.graalvm.buildtools.native:org.graalvm.buildtools.native.gradle.plugin", version.ref = "graalvm-native-buildtools" }
 gradle-micronaut = { module = "io.micronaut.gradle:micronaut-gradle-plugin", version.ref = "micronaut-gradle-plugin" }
+jreleaser = { module = "org.jreleaser:org.jreleaser.gradle.plugin", version.ref = "jreleaser"}

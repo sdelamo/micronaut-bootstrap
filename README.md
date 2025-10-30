@@ -23,8 +23,29 @@ Run `./gradlew testCodeCoverageReport` and you can access the HTML report `open 
 
 The template applies the [Gradle Build Native Image Plugin](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html). You can run the Gradle task `./gradlew nativeTest` to ensure your library is compatible with Native Image.  
 
-## Publish to Sonatype OSSRH (OSS Repository Hosting)
+## Publish to Maven Central
 
-- Bump up version. Ensure `projectVersion` does not contain `-SNAPSHOT`. 
+- Bump up version. Ensure `projectVersion` does not contain `-SNAPSHOT`.
 - Tag it. E.g. `v1.0.0`
-- `./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository --info`
+
+1) Verify release & deploy configuration
+```
+./gradlew jreleaserConfig
+```
+2) 
+3) Ensure a clean deployment
+
+```
+./gradlew clean
+```
+
+3) Stage all artifacts to a local directory
+
+```
+./gradlew publish
+```
+4) Deploy and release
+
+```
+./gradlew jreleaserDeploy
+```
