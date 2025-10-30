@@ -2,9 +2,9 @@
 micronaut="4.10.1"
 
 # Gradle plugins
-graalvm-native-buildtools = "0.10.6"
 micronaut-gradle-plugin = "4.5.1"
 spotless = "7.0.2"
+graalvm-native-buildtools = "0.11.2"
 
 [libraries]
 spotless = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
