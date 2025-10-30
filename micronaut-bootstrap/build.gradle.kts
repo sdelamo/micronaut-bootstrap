@@ -22,4 +22,6 @@ dependencies {
 
     testImplementation(mn.micronaut.liquibase)
     testImplementation(mn.slf4j.jul.to.slf4j)
+    testRuntimeOnly(mn.junit.jupiter.engine)
+    testRuntimeOnly(mn.junit.platform.launcher)
 }
