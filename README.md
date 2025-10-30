@@ -25,26 +25,27 @@ The template applies the [Gradle Build Native Image Plugin](https://graalvm.gith
 
 ## Publish to Maven Central
 
+### 1. Set `projectVersion` and tag
 - Bump up version. Ensure `projectVersion` does not contain `-SNAPSHOT`.
 - Tag it. E.g. `v1.0.0`
 
-1) Verify release & deploy configuration
+### 2. Verify release & deploy configuration
 ```
 ./gradlew jreleaserConfig
 ```
-2) 
-3) Ensure a clean deployment
+ 
+## 3. Ensure a clean deployment
 
 ```
 ./gradlew clean
 ```
 
-3) Stage all artifacts to a local directory
+## 4. Stage all artifacts to a local directory
 
 ```
 ./gradlew publish
 ```
-4) Deploy and release
+## 5. Deploy and release
 
 ```
 ./gradlew jreleaserDeploy
