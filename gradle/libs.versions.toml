@@ -1,5 +1,5 @@
 [versions]
-micronaut="4.10.1"
+micronaut="4.10.13"
 
 # Gradle plugins
 spotless = "7.0.2"
